@@ -1,72 +1,51 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Guidance for Claude Code when working in this repository.
 
-## Project Overview
+## Project overview
 
-Modern Bootstrap 5 Admin Dashboard Template (v3.3.0) using Vite, Alpine.js, and SCSS.
+Static, informational website for **A. Sharif Commerce**, an independent UK
+sole-trader e-commerce business (Hemel Hempstead, Hertfordshire) that sources
+practical products from wholesalers for resale through online marketplaces
+(including Amazon UK). The site is aimed at prospective UK wholesale/
+distribution suppliers — it lets them verify who the business is and what it
+buys against. It is **not** a storefront: there is no cart, checkout, product
+catalogue with prices, or customer-facing shop.
 
-| Directory | Purpose |
-|-----------|---------|
-| `src-modern/` | Source files (Bootstrap 5.3.8, ES6+ modules) |
-| `dist-modern/` | Production build output |
-| `src/`, `dist/` | Legacy Bootstrap 3 code - **do not use** |
+## Stack
 
-## Commands
+Plain HTML/CSS/JS. No build step, no framework, no dependencies. Open any
+`.html` file directly or serve the directory with any static file server
+(e.g. `python3 -m http.server`).
 
-```bash
-npm run dev      # Dev server at http://localhost:3000
-npm run build    # Production build
-npm run lint     # ESLint check
-npm run format   # Prettier format
-```
+## Structure
 
-## Key Files
-
-| File | Purpose |
+| Path | Purpose |
 |------|---------|
-| `src-modern/scripts/main.js` | App entry point, initializes AdminApp class |
-| `src-modern/styles/scss/main.scss` | SCSS entry point |
-| `vite.config.js` | Build config with multi-page entries |
-| `eslint.config.js` | ESLint v9 flat config |
+| `index.html` | Home — hero, trade profile snippet, category/process/standards teasers |
+| `what-we-source.html` | Full category list |
+| `how-we-buy.html` | Buying process |
+| `supplier-standards.html` | Requirements for suppliers (invoicing, compliance, etc.) |
+| `about.html` | Company background + trade profile |
+| `contact.html` | Supplier contact (mailto CTA), trade profile table |
+| `privacy.html` / `terms.html` | Legal templates — explicitly marked as drafts, not legal advice |
+| `css/style.css` | All styling (single stylesheet, CSS custom properties for tokens) |
+| `js/main.js` | Mobile nav toggle + footer year only |
 
-## Architecture Quick Reference
+## Content/tone rules
 
-**Page Detection**: Each HTML page needs `data-page="pagename"` on `<body>` to load correct component.
+- No invented metrics, testimonials, partner logos, or unsupported claims.
+- Never imply wholesale invoices can be altered, backdated, or reissued in a
+  different name — supplier-standards.html and index.html state the opposite
+  explicitly.
+- Keep copy factual and specific; avoid generic marketing/AI-sounding language.
+- No non-essential cookies or analytics.
+- Contact is email-only (mailto), no enquiry form, since there's no reviewed
+  privacy infrastructure behind one.
 
-**Component Loading**: Dynamic imports in `main.js` based on page:
+## Testing changes
 
-```javascript
-case 'users':
-  await import('./components/users.js');
-  break;
-```
-
-**Alpine.js Pattern**: Components register via `Alpine.data()`:
-
-```javascript
-Alpine.data('componentName', () => ({
-  init() { /* setup */ },
-  // methods and state
-}));
-```
-
-## Adding a New Page
-
-1. Create `src-modern/newpage.html` with `data-page="newpage"` on body
-2. Add entry to `vite.config.js` → `rollupOptions.input`
-3. Create `src-modern/scripts/components/newpage.js`
-4. Add case to `initPageComponents()` in `main.js`
-5. Optional: Create `src-modern/styles/scss/pages/_newpage.scss` and import in `main.scss`
-
-## Dependencies
-
-- **UI**: Bootstrap 5.3.8, Bootstrap Icons 1.13.1
-- **Reactive**: Alpine.js 3.15.4
-- **Charts**: ApexCharts 5.3.6, Chart.js 4.5.1
-- **Notifications**: SweetAlert2 11.26.17
-- **Build**: Vite 7.3.1, Sass 1.97.3
-
-## Documentation
-
-See [DEVELOPMENT.md](DEVELOPMENT.md) for detailed architecture, patterns, and styling guide.
+There's no test suite. When changing layout/CSS, check both desktop and
+mobile widths (~390px) for horizontal overflow, verify the mobile nav toggle,
+and confirm internal links resolve — e.g. with Playwright against a local
+static server, or by eye in a browser.
