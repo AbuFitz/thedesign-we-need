@@ -33,7 +33,7 @@ Plain HTML/CSS/JS. No build step, no framework, no dependencies. Open any
 | `404.html` | Custom not-found page, `noindex` |
 | `css/style.css` | Entire design system (tokens + components, single file) |
 | `js/main.js` | Mobile nav (with focus/Escape handling), scroll header state, scroll-reveal, footer year |
-| `robots.txt`, `sitemap.xml` | SEO — **use placeholder domain `https://example.com`, must be replaced before go-live** |
+| `robots.txt`, `sitemap.xml` | SEO — production domain `https://a-sharif-commerce.vercel.app` |
 | `images/favicon.svg`, `images/apple-touch-icon.png`, `images/og-image.png` | Brand marks — generated to match the design system, not stock art |
 
 ## Design system
@@ -62,12 +62,12 @@ IntersectionObserver scroll-reveal) and fully disabled under
 - Only town/county level location (Hemel Hempstead, Hertfordshire) — never
   a street address.
 
-## Production notes (before deploying for real)
+## Production notes
 
 - `robots.txt`, `sitemap.xml`, and every page's `<link rel="canonical">` /
-  Open Graph `og:url` / `og:image` currently use the placeholder domain
-  `https://example.com`. Replace it site-wide with the real production
-  domain before going live.
+  Open Graph `og:url` / `og:image` point at the confirmed production domain
+  `https://a-sharif-commerce.vercel.app`. If that domain ever changes, update
+  it site-wide across those files.
 - No `vercel.json` — not needed. It's a plain multi-page static site with
   `.html` extensions in every internal link; Vercel serves it with zero
   config, and `404.html` at the repo root is picked up automatically as the

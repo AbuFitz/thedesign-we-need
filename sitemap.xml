@@ -1,36 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Placeholder domain below — replace https://example.com with the production domain before go-live. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://example.com/</loc>
+    <loc>https://a-sharif-commerce.vercel.app/</loc>
     <lastmod>2026-09-18</lastmod>
   </url>
   <url>
-    <loc>https://example.com/what-we-source.html</loc>
+    <loc>https://a-sharif-commerce.vercel.app/what-we-source.html</loc>
     <lastmod>2026-09-18</lastmod>
   </url>
   <url>
-    <loc>https://example.com/how-we-buy.html</loc>
+    <loc>https://a-sharif-commerce.vercel.app/how-we-buy.html</loc>
     <lastmod>2026-09-18</lastmod>
   </url>
   <url>
-    <loc>https://example.com/supplier-standards.html</loc>
+    <loc>https://a-sharif-commerce.vercel.app/supplier-standards.html</loc>
     <lastmod>2026-09-18</lastmod>
   </url>
   <url>
-    <loc>https://example.com/about.html</loc>
+    <loc>https://a-sharif-commerce.vercel.app/about.html</loc>
     <lastmod>2026-09-18</lastmod>
   </url>
   <url>
-    <loc>https://example.com/contact.html</loc>
+    <loc>https://a-sharif-commerce.vercel.app/contact.html</loc>
     <lastmod>2026-09-18</lastmod>
   </url>
   <url>
-    <loc>https://example.com/privacy.html</loc>
+    <loc>https://a-sharif-commerce.vercel.app/privacy.html</loc>
     <lastmod>2026-09-18</lastmod>
   </url>
   <url>
-    <loc>https://example.com/terms.html</loc>
+    <loc>https://a-sharif-commerce.vercel.app/terms.html</loc>
     <lastmod>2026-09-18</lastmod>
   </url>
 </urlset>
