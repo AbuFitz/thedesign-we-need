@@ -1,0 +1,5 @@
+# Placeholder domain below — replace https://example.com with the production domain before go-live.
+User-agent: *
+Allow: /
+
+Sitemap: https://example.com/sitemap.xml
