@@ -68,7 +68,19 @@ module.exports = async (req, res) => {
     });
   }
 
-  const siteUrl = process.env.SITE_URL || `https://${req.headers.host}`;
+  // SITE_URL must be configured explicitly — never derive the Stripe
+  // success/cancel redirect from the request's Host header. Host headers
+  // reaching a serverless function aren't guaranteed to be validated
+  // against the deployment's actual bound domain, so trusting it here
+  // would let a spoofed request redirect a real paying customer (with
+  // their live session_id) to an attacker-controlled domain after payment.
+  const siteUrl = process.env.SITE_URL;
+  if (!siteUrl) {
+    return res.status(503).json({
+      error: 'checkout_unavailable',
+      message: 'Checkout is not yet configured on this deployment (missing SITE_URL).',
+    });
+  }
 
   try {
     const session = await createCheckoutSession({

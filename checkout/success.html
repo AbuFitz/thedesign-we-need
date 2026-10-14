@@ -67,6 +67,16 @@
   <script src="/js/main.js" defer></script>
   <script defer>
     (function () {
+      // Stripe-sourced values (customer email, status, error message) are
+      // never trusted as HTML — the customer controls what they type into
+      // Stripe's own checkout email field, so this is escaped even though
+      // it would currently only affect the submitter's own browser.
+      function escapeHtml(s) {
+        var div = document.createElement('div');
+        div.textContent = s == null ? '' : String(s);
+        return div.innerHTML;
+      }
+
       function init() {
         var el = document.getElementById('successContent');
         var params = new URLSearchParams(location.search);
@@ -81,14 +91,14 @@
           .then(function (r) { return r.json().then(function (json) { return { ok: r.ok, json: json }; }); })
           .then(function (res) {
             if (!res.ok) {
-              el.innerHTML = '<h1 class="display-lg">We couldn\'t verify that order</h1><p class="lede">' + (res.json.message || 'Something went wrong checking this session.') + ' If you were charged, <a class="link-arrow accent" href="/contact.html">contact us<span class="arrow" aria-hidden="true">→</span></a> and we\'ll sort it out.</p>';
+              el.innerHTML = '<h1 class="display-lg">We couldn\'t verify that order</h1><p class="lede">' + escapeHtml(res.json.message || 'Something went wrong checking this session.') + ' If you were charged, <a class="link-arrow accent" href="/contact.html">contact us<span class="arrow" aria-hidden="true">→</span></a> and we\'ll sort it out.</p>';
               return;
             }
             if (res.json.status === 'paid') {
               window.ASC_CART.clearCart();
-              el.innerHTML = '<h1 class="display-lg">Thank you — your order is confirmed</h1><p class="lede">A receipt has been sent to ' + (res.json.customerEmail || 'your email address') + '. We\'ll be in touch with delivery details.</p><p style="margin-top:1.6rem;"><a class="btn-solid" href="/shop.html">Continue shopping<span class="arrow" aria-hidden="true">→</span></a></p>';
+              el.innerHTML = '<h1 class="display-lg">Thank you — your order is confirmed</h1><p class="lede">A receipt has been sent to ' + escapeHtml(res.json.customerEmail || 'your email address') + '. We\'ll be in touch with delivery details.</p><p style="margin-top:1.6rem;"><a class="btn-solid" href="/shop.html">Continue shopping<span class="arrow" aria-hidden="true">→</span></a></p>';
             } else {
-              el.innerHTML = '<h1 class="display-lg">Payment not confirmed yet</h1><p class="lede">This session\'s status is "' + res.json.status + '". If you believe you were charged, <a class="link-arrow accent" href="/contact.html">contact us<span class="arrow" aria-hidden="true">→</span></a>.</p>';
+              el.innerHTML = '<h1 class="display-lg">Payment not confirmed yet</h1><p class="lede">This session\'s status is "' + escapeHtml(res.json.status) + '". If you believe you were charged, <a class="link-arrow accent" href="/contact.html">contact us<span class="arrow" aria-hidden="true">→</span></a>.</p>';
             }
           })
           .catch(function () {

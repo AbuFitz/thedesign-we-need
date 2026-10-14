@@ -33,9 +33,14 @@ here is the only thing standing between "preview" and "real money moving."
 ## 4. Set environment variables
 
 Locally: copy `.env.example` to `.env.local` and fill in `STRIPE_SECRET_KEY`
-and `STRIPE_PUBLISHABLE_KEY` (test mode values).
+and `STRIPE_PUBLISHABLE_KEY` (test mode values), plus `SITE_URL`
+(e.g. `http://localhost:8945` locally). `SITE_URL` is **required** —
+`/api/create-checkout-session` fails closed without it rather than
+falling back to the request's Host header, which isn't a trustworthy
+source for a redirect URL in a payment flow.
 
-On Vercel: Project → Settings → Environment Variables → add the same names.
+On Vercel: Project → Settings → Environment Variables → add the same names,
+setting `SITE_URL` to the deployment's real production URL.
 Never paste a live (`sk_live_`) key into a preview environment.
 
 ## 5. Webhook, for local testing
