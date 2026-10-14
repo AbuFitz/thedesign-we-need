@@ -1,0 +1,15 @@
+{
+  "name": "a-sharif-commerce",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A. Sharif Commerce — static storefront + Vercel Functions checkout scaffold.",
+  "scripts": {
+    "dev": "node scripts/dev-server.mjs",
+    "generate:products": "node scripts/generate-products.mjs",
+    "generate:sitemap": "node scripts/generate-sitemap.mjs",
+    "test": "playwright test --config=playwright.config.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.0"
+  }
+}

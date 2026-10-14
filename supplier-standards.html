@@ -17,38 +17,45 @@
   <meta name="twitter:title" content="Supplier Standards | A. Sharif Commerce" />
   <meta name="twitter:description" content="What A. Sharif Commerce requires from a new supplier, including a firm position on invoicing." />
   <meta name="twitter:image" content="https://a-sharif-commerce.vercel.app/images/og-image.png" />
-  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
-  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header" id="siteHeader">
     <div class="container header-inner">
-      <a href="index.html" class="wordmark">A. Sharif <em>Commerce</em></a>
+      <a href="/index.html" class="wordmark">A. Sharif <em>Commerce</em></a>
       <nav class="main-nav" id="mainNav" aria-label="Primary">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="what-we-source.html">What We Source</a></li>
-          <li><a href="how-we-buy.html">How We Buy</a></li>
-          <li><a href="supplier-standards.html" class="active">Supplier Standards</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/shop.html">Shop</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/trade.html">Trade</a></li>
+          <li><a href="/contact.html">Contact</a></li>
         </ul>
-        <a class="email-link" href="mailto:a.sharifcommerce@outlook.com">Email us<span class="arrow" aria-hidden="true">↗</span></a>
       </nav>
-      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="header-actions">
+        <button type="button" class="cart-link" data-cart-toggle aria-label="Open cart, 0 items">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 7h16l-1.5 11a2 2 0 0 1-2 1.8H7.5a2 2 0 0 1-2-1.8L4 7Zm3-3a5 5 0 0 1 10 0" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>
+          <span class="cart-count" data-cart-count data-empty="true">0</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
   <main id="main">
-    <section class="page-hero container">
+    <nav class="breadcrumbs container" style="padding-top:2.4rem;" aria-label="Breadcrumb">
+      <a href="/trade.html">Trade</a><span class="sep">/</span><span aria-current="page">Supplier Standards</span>
+    </nav>
+    <section class="page-hero container" style="padding-top:1rem;">
       <p class="kicker">Standards</p>
       <h1 class="display-lg">Supplier standards</h1>
       <p class="lede">These are non-negotiable. They protect the marketplace accounts we sell through and the buyers who receive the products.</p>
@@ -75,7 +82,7 @@
           <li class="index-row">
             <span class="index-num">04</span>
             <h3>Product-safety and compliance documents where applicable</h3>
-            <p class="index-desc">For categories such as toys, health and beauty, or anything with electrical or chemical components, we need the relevant certification and safety documentation up front.</p>
+            <p class="index-desc">Food-adjacent kitchenware needs food-contact material data; wall-fixed products need confirmed load ratings and fixings. Anything with electrical or chemical components needs the relevant certification up front.</p>
           </li>
           <li class="index-row">
             <span class="index-num">05</span>
@@ -110,12 +117,18 @@
     <div class="container colophon">
       <p>&copy; <span id="year"></span> A. Sharif Commerce — Hemel Hempstead, UK</p>
       <div class="colophon-links">
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Website Terms</a>
+        <a href="/delivery.html">Delivery</a>
+        <a href="/returns.html">Returns</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/accessibility.html">Accessibility</a>
+        <a href="/cookies.html">Cookies</a>
+        <a href="/shop.html">Shop</a>
       </div>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="/js/cart.js" defer></script>
+  <script src="/js/main.js" defer></script>
 </body>
 </html>

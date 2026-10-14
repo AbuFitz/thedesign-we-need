@@ -2,34 +2,90 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://a-sharif-commerce.vercel.app/</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-10-14</lastmod>
   </url>
   <url>
-    <loc>https://a-sharif-commerce.vercel.app/what-we-source.html</loc>
-    <lastmod>2026-09-18</lastmod>
+    <loc>https://a-sharif-commerce.vercel.app/shop.html</loc>
+    <lastmod>2026-10-14</lastmod>
   </url>
   <url>
-    <loc>https://a-sharif-commerce.vercel.app/how-we-buy.html</loc>
-    <lastmod>2026-09-18</lastmod>
-  </url>
-  <url>
-    <loc>https://a-sharif-commerce.vercel.app/supplier-standards.html</loc>
-    <lastmod>2026-09-18</lastmod>
+    <loc>https://a-sharif-commerce.vercel.app/trade.html</loc>
+    <lastmod>2026-10-14</lastmod>
   </url>
   <url>
     <loc>https://a-sharif-commerce.vercel.app/about.html</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-10-14</lastmod>
   </url>
   <url>
     <loc>https://a-sharif-commerce.vercel.app/contact.html</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://a-sharif-commerce.vercel.app/what-we-source.html</loc>
+    <lastmod>2026-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://a-sharif-commerce.vercel.app/how-we-buy.html</loc>
+    <lastmod>2026-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://a-sharif-commerce.vercel.app/supplier-standards.html</loc>
+    <lastmod>2026-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://a-sharif-commerce.vercel.app/delivery.html</loc>
+    <lastmod>2026-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://a-sharif-commerce.vercel.app/returns.html</loc>
+    <lastmod>2026-10-14</lastmod>
   </url>
   <url>
     <loc>https://a-sharif-commerce.vercel.app/privacy.html</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-10-14</lastmod>
   </url>
   <url>
     <loc>https://a-sharif-commerce.vercel.app/terms.html</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://a-sharif-commerce.vercel.app/accessibility.html</loc>
+    <lastmod>2026-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://a-sharif-commerce.vercel.app/cookies.html</loc>
+    <lastmod>2026-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://a-sharif-commerce.vercel.app/product/cable-clips.html</loc>
+    <lastmod>2026-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://a-sharif-commerce.vercel.app/product/cable-organiser-box.html</loc>
+    <lastmod>2026-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://a-sharif-commerce.vercel.app/product/packing-cubes.html</loc>
+    <lastmod>2026-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://a-sharif-commerce.vercel.app/product/drawer-organisers.html</loc>
+    <lastmod>2026-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://a-sharif-commerce.vercel.app/product/roll-up-sink-rack.html</loc>
+    <lastmod>2026-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://a-sharif-commerce.vercel.app/product/sink-caddy.html</loc>
+    <lastmod>2026-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://a-sharif-commerce.vercel.app/product/broom-mop-holder.html</loc>
+    <lastmod>2026-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://a-sharif-commerce.vercel.app/product/wardrobe-organiser.html</loc>
+    <lastmod>2026-10-14</lastmod>
   </url>
 </urlset>

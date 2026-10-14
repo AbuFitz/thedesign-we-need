@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Order confirmed | A. Sharif Commerce</title>
+  <meta name="description" content="Order confirmation." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#17160f" />
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="/index.html" class="wordmark">A. Sharif <em>Commerce</em></a>
+      <nav class="main-nav" id="mainNav" aria-label="Primary">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/shop.html">Shop</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/trade.html">Trade</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button type="button" class="cart-link" data-cart-toggle aria-label="Open cart, 0 items">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 7h16l-1.5 11a2 2 0 0 1-2 1.8H7.5a2 2 0 0 1-2-1.8L4 7Zm3-3a5 5 0 0 1 10 0" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>
+          <span class="cart-count" data-cart-count data-empty="true">0</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="error-page container">
+      <p class="kicker">Checkout</p>
+      <div id="successContent">
+        <h1 class="display-lg">Checking your order…</h1>
+        <p class="lede">One moment — we're verifying your payment with Stripe before showing any details.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container colophon">
+      <p>&copy; <span id="year"></span> A. Sharif Commerce — Hemel Hempstead, UK</p>
+      <div class="colophon-links">
+        <a href="/delivery.html">Delivery</a>
+        <a href="/returns.html">Returns</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/cart.js" defer></script>
+  <script src="/js/main.js" defer></script>
+  <script defer>
+    (function () {
+      function init() {
+        var el = document.getElementById('successContent');
+        var params = new URLSearchParams(location.search);
+        var sessionId = params.get('session_id');
+
+        if (!sessionId) {
+          el.innerHTML = '<h1 class="display-lg">No order found</h1><p class="lede">There\'s no session to check — if you\'ve just paid, check your email for a Stripe receipt, or <a class="link-arrow accent" href="/contact.html">contact us<span class="arrow" aria-hidden="true">→</span></a>.</p>';
+          return;
+        }
+
+        fetch('/api/checkout-session?session_id=' + encodeURIComponent(sessionId))
+          .then(function (r) { return r.json().then(function (json) { return { ok: r.ok, json: json }; }); })
+          .then(function (res) {
+            if (!res.ok) {
+              el.innerHTML = '<h1 class="display-lg">We couldn\'t verify that order</h1><p class="lede">' + (res.json.message || 'Something went wrong checking this session.') + ' If you were charged, <a class="link-arrow accent" href="/contact.html">contact us<span class="arrow" aria-hidden="true">→</span></a> and we\'ll sort it out.</p>';
+              return;
+            }
+            if (res.json.status === 'paid') {
+              window.ASC_CART.clearCart();
+              el.innerHTML = '<h1 class="display-lg">Thank you — your order is confirmed</h1><p class="lede">A receipt has been sent to ' + (res.json.customerEmail || 'your email address') + '. We\'ll be in touch with delivery details.</p><p style="margin-top:1.6rem;"><a class="btn-solid" href="/shop.html">Continue shopping<span class="arrow" aria-hidden="true">→</span></a></p>';
+            } else {
+              el.innerHTML = '<h1 class="display-lg">Payment not confirmed yet</h1><p class="lede">This session\'s status is "' + res.json.status + '". If you believe you were charged, <a class="link-arrow accent" href="/contact.html">contact us<span class="arrow" aria-hidden="true">→</span></a>.</p>';
+            }
+          })
+          .catch(function () {
+            el.innerHTML = '<h1 class="display-lg">We couldn\'t verify that order</h1><p class="lede">Please <a class="link-arrow accent" href="/contact.html">contact us<span class="arrow" aria-hidden="true">→</span></a> with your order details.</p>';
+          });
+      }
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+      else init();
+    })();
+  </script>
+</body>
+</html>

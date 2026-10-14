@@ -1,0 +1,271 @@
+{
+  "$schema": "Shared product truth model for A. Sharif Commerce. PUBLIC file — fetched directly by client-side JS (shop/product/cart) and read server-side by the checkout API. Never put supplier cost, margin, or private contact data in this file — that lives server-only in api/_lib/private-data.js.",
+  "lastReviewed": "2026-10-14",
+  "categories": [
+    { "id": "cable-management", "label": "Cable management" },
+    { "id": "travel", "label": "Travel & packing" },
+    { "id": "storage", "label": "Home storage" },
+    { "id": "kitchen", "label": "Kitchen" },
+    { "id": "cleaning", "label": "Cleaning & utility" }
+  ],
+  "products": [
+    {
+      "sku": "ASC-CBLCLIP-01",
+      "slug": "cable-clips",
+      "name": "Adhesive Cable Clips",
+      "category": "cable-management",
+      "shortDescription": "Self-adhesive clips for routing and tidying loose cables along a desk, skirting board or wall.",
+      "description": "A set of self-adhesive cable clips for keeping charging and desk cables off the floor and away from foot traffic. A straightforward, low-cost line with steady everyday demand — the kind of product this business is built to source and sell well, not the kind that needs a dramatic pitch.",
+      "lifecycle": { "status": "preview", "checkoutBlocked": true, "blockedReasons": [
+        "No physical sample has been received or reviewed",
+        "Supplier wholesale invoice and compliance documents not yet on file",
+        "Final retail price not confirmed",
+        "Stripe Price ID not provisioned"
+      ]},
+      "variants": [
+        { "id": "cable-clips-10", "label": "Set of 10", "stripePriceId": null },
+        { "id": "cable-clips-20", "label": "Set of 20", "stripePriceId": null }
+      ],
+      "media": { "status": "placeholder", "note": "Original placeholder graphic only — no product photography exists yet and nothing has been copied from any marketplace." },
+      "specification": {
+        "dimensions": null, "materials": null, "packContents": null, "care": null,
+        "note": "Specification pending a confirmed data sheet from a sourced supplier."
+      },
+      "warnings": ["Keep away from very hot surfaces until an adhesive temperature rating is confirmed by the supplier."],
+      "origin": { "countryOfManufacture": null, "note": "Not yet confirmed — no supplier onboarded for this line." },
+      "inventory": { "status": "not_stocked", "quantityAvailable": 0 },
+      "delivery": { "state": "undefined", "note": "No delivery terms agreed with a carrier or 3PL yet." },
+      "returns": { "state": "undefined", "note": "Returns process not yet defined; see returns.html for the current general position." },
+      "supplierRef": { "supplierId": null, "note": "Not yet sourced." },
+      "pricing": { "priceGBP": null, "vatIncluded": null, "note": "No final price until landed cost is confirmed." },
+      "compliance": { "status": "not_assessed", "tradingStandardsNotes": "General Product Safety Regulations item (no CE/UKCA category applies). Traceability record-keeping not yet possible — no supplier invoice on file.", "lastReviewed": "2026-10-14" },
+      "stripe": { "productId": null },
+      "seo": { "title": "Adhesive Cable Clips — A. Sharif Commerce", "description": "Self-adhesive cable clips for tidy desk and wall cable routing. Catalogue preview — not yet available to buy." }
+    },
+    {
+      "sku": "ASC-CBLBOX-01",
+      "slug": "cable-organiser-box",
+      "name": "Cable Management Organiser Box",
+      "category": "cable-management",
+      "shortDescription": "A ventilated box for hiding power strips and surplus cable behind a desk or TV unit.",
+      "description": "A cable box designed to hold a power strip and excess cable length out of sight, with ventilation to avoid heat build-up. Sits alongside the cable clips as a second, slightly higher-value cable-management line in the same everyday category.",
+      "lifecycle": { "status": "preview", "checkoutBlocked": true, "blockedReasons": [
+        "No physical sample has been received or reviewed",
+        "Supplier wholesale invoice and compliance documents not yet on file",
+        "Final retail price not confirmed",
+        "Stripe Price ID not provisioned"
+      ]},
+      "variants": [
+        { "id": "cable-box-standard", "label": "Standard", "stripePriceId": null }
+      ],
+      "media": { "status": "placeholder", "note": "Original placeholder graphic only." },
+      "specification": {
+        "dimensions": null, "materials": null, "packContents": null, "care": null,
+        "note": "Specification pending a confirmed data sheet from a sourced supplier."
+      },
+      "warnings": ["Ventilation and heat performance not yet verified for use with a loaded power strip — do not rely on this listing for that until confirmed."],
+      "origin": { "countryOfManufacture": null, "note": "Not yet confirmed." },
+      "inventory": { "status": "not_stocked", "quantityAvailable": 0 },
+      "delivery": { "state": "undefined", "note": "No delivery terms agreed yet." },
+      "returns": { "state": "undefined", "note": "Returns process not yet defined; see returns.html." },
+      "supplierRef": { "supplierId": null, "note": "Not yet sourced." },
+      "pricing": { "priceGBP": null, "vatIncluded": null, "note": "No final price until landed cost is confirmed." },
+      "compliance": { "status": "not_assessed", "tradingStandardsNotes": "General Product Safety Regulations item. Any claim about heat/ventilation performance requires supplier test data before publishing.", "lastReviewed": "2026-10-14" },
+      "stripe": { "productId": null },
+      "seo": { "title": "Cable Management Organiser Box — A. Sharif Commerce", "description": "A ventilated box for hiding power strips and cable slack. Catalogue preview — not yet available to buy." }
+    },
+    {
+      "sku": "ASC-PACKCUBE-01",
+      "slug": "packing-cubes",
+      "name": "Packing Cubes Set",
+      "category": "travel",
+      "shortDescription": "A set of soft packing cubes for organising a suitcase or holdall by category.",
+      "description": "Packing cubes in graduated sizes for splitting a suitcase into clothing, laundry and accessories without everything shifting loose in transit. A practical, repeat-purchase travel category with a stable UK market.",
+      "lifecycle": { "status": "preview", "checkoutBlocked": true, "blockedReasons": [
+        "No physical sample has been received or reviewed",
+        "Supplier wholesale invoice and compliance documents not yet on file",
+        "Final retail price not confirmed",
+        "Stripe Price ID not provisioned"
+      ]},
+      "variants": [
+        { "id": "packing-cubes-6pc", "label": "6-piece set", "stripePriceId": null }
+      ],
+      "media": { "status": "placeholder", "note": "Original placeholder graphic only." },
+      "specification": {
+        "dimensions": null, "materials": null, "packContents": null, "care": null,
+        "note": "Specification pending a confirmed data sheet from a sourced supplier."
+      },
+      "warnings": [],
+      "origin": { "countryOfManufacture": null, "note": "Not yet confirmed." },
+      "inventory": { "status": "not_stocked", "quantityAvailable": 0 },
+      "delivery": { "state": "undefined", "note": "No delivery terms agreed yet." },
+      "returns": { "state": "undefined", "note": "Returns process not yet defined; see returns.html." },
+      "supplierRef": { "supplierId": null, "note": "Not yet sourced." },
+      "pricing": { "priceGBP": null, "vatIncluded": null, "note": "No final price until landed cost is confirmed." },
+      "compliance": { "status": "not_assessed", "tradingStandardsNotes": "General Product Safety Regulations item. No textile flammability claim will be made until supplier documentation supports it.", "lastReviewed": "2026-10-14" },
+      "stripe": { "productId": null },
+      "seo": { "title": "Packing Cubes Set — A. Sharif Commerce", "description": "A graduated set of packing cubes for organised luggage. Catalogue preview — not yet available to buy." }
+    },
+    {
+      "sku": "ASC-DRWORG-01",
+      "slug": "drawer-organisers",
+      "name": "Expandable Drawer Organisers",
+      "category": "storage",
+      "shortDescription": "Adjustable divider trays for splitting a drawer into smaller compartments.",
+      "description": "Expandable drawer dividers for cutlery, desk or bathroom drawers, adjusted to fit the drawer width. Sits in the same practical home-storage territory as the wardrobe organiser without overlapping it directly.",
+      "lifecycle": { "status": "preview", "checkoutBlocked": true, "blockedReasons": [
+        "No physical sample has been received or reviewed",
+        "Supplier wholesale invoice and compliance documents not yet on file",
+        "Final retail price not confirmed",
+        "Stripe Price ID not provisioned"
+      ]},
+      "variants": [
+        { "id": "drawer-organisers-4pc", "label": "Set of 4", "stripePriceId": null }
+      ],
+      "media": { "status": "placeholder", "note": "Original placeholder graphic only." },
+      "specification": {
+        "dimensions": null, "materials": null, "packContents": null, "care": null,
+        "note": "Specification pending a confirmed data sheet from a sourced supplier."
+      },
+      "warnings": [],
+      "origin": { "countryOfManufacture": null, "note": "Not yet confirmed." },
+      "inventory": { "status": "not_stocked", "quantityAvailable": 0 },
+      "delivery": { "state": "undefined", "note": "No delivery terms agreed yet." },
+      "returns": { "state": "undefined", "note": "Returns process not yet defined; see returns.html." },
+      "supplierRef": { "supplierId": null, "note": "Not yet sourced." },
+      "pricing": { "priceGBP": null, "vatIncluded": null, "note": "No final price until landed cost is confirmed." },
+      "compliance": { "status": "not_assessed", "tradingStandardsNotes": "General Product Safety Regulations item.", "lastReviewed": "2026-10-14" },
+      "stripe": { "productId": null },
+      "seo": { "title": "Expandable Drawer Organisers — A. Sharif Commerce", "description": "Adjustable drawer dividers for cutlery, desk and bathroom drawers. Catalogue preview — not yet available to buy." }
+    },
+    {
+      "sku": "ASC-SINKRACK-01",
+      "slug": "roll-up-sink-rack",
+      "name": "Roll-Up Sink Drying Rack",
+      "category": "kitchen",
+      "shortDescription": "A flexible, rollable rack that sits over the sink or lies flat for drying dishes or produce.",
+      "description": "A silicone-and-stainless roll-up rack that unrolls flat for drying dishes next to the sink and rolls up small for storage. A compact kitchen line that pairs naturally with the sink caddy below.",
+      "lifecycle": { "status": "preview", "checkoutBlocked": true, "blockedReasons": [
+        "No physical sample has been received or reviewed",
+        "Supplier wholesale invoice and compliance documents not yet on file",
+        "Final retail price not confirmed",
+        "Stripe Price ID not provisioned"
+      ]},
+      "variants": [
+        { "id": "sink-rack-standard", "label": "Standard", "stripePriceId": null }
+      ],
+      "media": { "status": "placeholder", "note": "Original placeholder graphic only." },
+      "specification": {
+        "dimensions": null, "materials": null, "packContents": null, "care": null,
+        "note": "Specification pending a confirmed data sheet from a sourced supplier."
+      },
+      "warnings": ["Food-contact safety has not yet been confirmed by supplier documentation — do not treat as food-safe until a compliance record is on file."],
+      "origin": { "countryOfManufacture": null, "note": "Not yet confirmed." },
+      "inventory": { "status": "not_stocked", "quantityAvailable": 0 },
+      "delivery": { "state": "undefined", "note": "No delivery terms agreed yet." },
+      "returns": { "state": "undefined", "note": "Returns process not yet defined; see returns.html." },
+      "supplierRef": { "supplierId": null, "note": "Not yet sourced." },
+      "pricing": { "priceGBP": null, "vatIncluded": null, "note": "No final price until landed cost is confirmed." },
+      "compliance": { "status": "not_assessed", "tradingStandardsNotes": "Kitchenware with food contact — needs food-contact material documentation from the supplier before this can be sold, in addition to standard GPSR duties.", "lastReviewed": "2026-10-14" },
+      "stripe": { "productId": null },
+      "seo": { "title": "Roll-Up Sink Drying Rack — A. Sharif Commerce", "description": "A flexible rack that unrolls over the sink for drying dishes. Catalogue preview — not yet available to buy." }
+    },
+    {
+      "sku": "ASC-SINKCADDY-01",
+      "slug": "sink-caddy",
+      "name": "Kitchen Sink Caddy",
+      "category": "kitchen",
+      "shortDescription": "A divided caddy that sits on or beside the sink for sponges, brushes and washing-up liquid.",
+      "description": "A compact caddy for keeping washing-up essentials together and off the worktop, usually sat on the sink divider or draining board. A small, frequently reordered kitchen accessory.",
+      "lifecycle": { "status": "preview", "checkoutBlocked": true, "blockedReasons": [
+        "No physical sample has been received or reviewed",
+        "Supplier wholesale invoice and compliance documents not yet on file",
+        "Final retail price not confirmed",
+        "Stripe Price ID not provisioned"
+      ]},
+      "variants": [
+        { "id": "sink-caddy-standard", "label": "Standard", "stripePriceId": null }
+      ],
+      "media": { "status": "placeholder", "note": "Original placeholder graphic only." },
+      "specification": {
+        "dimensions": null, "materials": null, "packContents": null, "care": null,
+        "note": "Specification pending a confirmed data sheet from a sourced supplier."
+      },
+      "warnings": [],
+      "origin": { "countryOfManufacture": null, "note": "Not yet confirmed." },
+      "inventory": { "status": "not_stocked", "quantityAvailable": 0 },
+      "delivery": { "state": "undefined", "note": "No delivery terms agreed yet." },
+      "returns": { "state": "undefined", "note": "Returns process not yet defined; see returns.html." },
+      "supplierRef": { "supplierId": null, "note": "Not yet sourced." },
+      "pricing": { "priceGBP": null, "vatIncluded": null, "note": "No final price until landed cost is confirmed." },
+      "compliance": { "status": "not_assessed", "tradingStandardsNotes": "General Product Safety Regulations item.", "lastReviewed": "2026-10-14" },
+      "stripe": { "productId": null },
+      "seo": { "title": "Kitchen Sink Caddy — A. Sharif Commerce", "description": "A divided caddy for sponges, brushes and washing-up liquid. Catalogue preview — not yet available to buy." }
+    },
+    {
+      "sku": "ASC-BRMHOLD-01",
+      "slug": "broom-mop-holder",
+      "name": "Wall-Mounted Broom & Mop Holder",
+      "category": "cleaning",
+      "shortDescription": "A wall-mounted rack with spring grips for storing brooms, mops and long-handled tools upright.",
+      "description": "A fixed-to-the-wall holder with several spring-loaded grips for keeping brooms, mops and dustpans upright and off the floor in a utility room, garage or cupboard.",
+      "lifecycle": { "status": "preview", "checkoutBlocked": true, "blockedReasons": [
+        "No physical sample has been received or reviewed",
+        "Supplier wholesale invoice and compliance documents not yet on file",
+        "Fixings/wall-mounting safety information not yet confirmed",
+        "Final retail price not confirmed",
+        "Stripe Price ID not provisioned"
+      ]},
+      "variants": [
+        { "id": "broom-holder-5slot", "label": "5-slot", "stripePriceId": null }
+      ],
+      "media": { "status": "placeholder", "note": "Original placeholder graphic only." },
+      "specification": {
+        "dimensions": null, "materials": null, "packContents": null, "care": null,
+        "note": "Specification pending a confirmed data sheet from a sourced supplier."
+      },
+      "warnings": ["This is a wall-fixed product — maximum load and fixing type are not yet confirmed, so no weight-bearing claim is made."],
+      "origin": { "countryOfManufacture": null, "note": "Not yet confirmed." },
+      "inventory": { "status": "not_stocked", "quantityAvailable": 0 },
+      "delivery": { "state": "undefined", "note": "No delivery terms agreed yet." },
+      "returns": { "state": "undefined", "note": "Returns process not yet defined; see returns.html." },
+      "supplierRef": { "supplierId": null, "note": "Not yet sourced." },
+      "pricing": { "priceGBP": null, "vatIncluded": null, "note": "No final price until landed cost is confirmed." },
+      "compliance": { "status": "not_assessed", "tradingStandardsNotes": "General Product Safety Regulations item. As a wall-fixed holder, load rating and fixings information must be confirmed and passed on to buyers before listing live.", "lastReviewed": "2026-10-14" },
+      "stripe": { "productId": null },
+      "seo": { "title": "Wall-Mounted Broom & Mop Holder — A. Sharif Commerce", "description": "A wall rack for storing brooms and mops upright. Catalogue preview — not yet available to buy." }
+    },
+    {
+      "sku": "ASC-WRDORG-01",
+      "slug": "wardrobe-organiser",
+      "name": "Hanging Wardrobe Organiser",
+      "category": "storage",
+      "shortDescription": "A multi-shelf hanging organiser for jumpers, bags and accessories inside a wardrobe.",
+      "description": "A fabric hanging organiser with several shelves that hooks over a wardrobe rail, adding folded storage without taking up floor or drawer space.",
+      "lifecycle": { "status": "preview", "checkoutBlocked": true, "blockedReasons": [
+        "No physical sample has been received or reviewed",
+        "Supplier wholesale invoice and compliance documents not yet on file",
+        "Final retail price not confirmed",
+        "Stripe Price ID not provisioned"
+      ]},
+      "variants": [
+        { "id": "wardrobe-organiser-6shelf", "label": "6-shelf", "stripePriceId": null }
+      ],
+      "media": { "status": "placeholder", "note": "Original placeholder graphic only." },
+      "specification": {
+        "dimensions": null, "materials": null, "packContents": null, "care": null,
+        "note": "Specification pending a confirmed data sheet from a sourced supplier."
+      },
+      "warnings": ["Maximum load per shelf and rail weight limit not yet confirmed."],
+      "origin": { "countryOfManufacture": null, "note": "Not yet confirmed." },
+      "inventory": { "status": "not_stocked", "quantityAvailable": 0 },
+      "delivery": { "state": "undefined", "note": "No delivery terms agreed yet." },
+      "returns": { "state": "undefined", "note": "Returns process not yet defined; see returns.html." },
+      "supplierRef": { "supplierId": null, "note": "Not yet sourced." },
+      "pricing": { "priceGBP": null, "vatIncluded": null, "note": "No final price until landed cost is confirmed." },
+      "compliance": { "status": "not_assessed", "tradingStandardsNotes": "General Product Safety Regulations item.", "lastReviewed": "2026-10-14" },
+      "stripe": { "productId": null },
+      "seo": { "title": "Hanging Wardrobe Organiser — A. Sharif Commerce", "description": "A multi-shelf hanging organiser for wardrobe storage. Catalogue preview — not yet available to buy." }
+    }
+  ]
+}
